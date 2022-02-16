@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:untitled/controller/controller.dart';
+import 'package:untitled/binding/binding.dart';
+import 'package:untitled/controller/reactive_controller.dart';
 import 'package:untitled/pages/home_page.dart';
+import 'package:untitled/pages/next_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +22,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       getPages: [
-        GetPage(name: "/", page: () {  })
+        GetPage(name: "/", page: () => HomePage()),
+        GetPage(name: "/next", page: () => NextPage()),
       ],
       home: HomePage(),
     );

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:untitled/model/todo.dart';
 
-class Controller extends GetxController{
+class ReactiveController extends GetxController{
   RxList todo_list = [].obs;
 
 
